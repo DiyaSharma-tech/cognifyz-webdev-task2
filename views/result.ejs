@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!-- Starting of HTML document -->
+<html>
+
+<head>
+
+    <!-- Title shown on browser tab -->
+    <title>Result Page</title>
+
+</head>
+
+<!-- Inline CSS used for font and spacing -->
+<body style="font-family: Arial; padding: 20px;">
+
+    <!-- Main heading with green color -->
+    <h1 style="color: green;">Submitted Successfully</h1>
+
+    <!-- Display submitted name dynamically -->
+    <p>
+        <strong>Name:</strong> <%= name %>
+    </p>
+
+    <!-- Display submitted email dynamically -->
+    <p>
+        <strong>Email:</strong> <%= email %>
+    </p>
+
+    <!-- Display submitted age dynamically -->
+    <p>
+        <strong>Age:</strong> <%= age %>
+    </p>
+
+    <!-- Horizontal line -->
+    <hr>
+
+    <!-- Heading for stored users -->
+    <h2>Stored Users</h2>
+
+    <!-- Loop through all stored users -->
+    <% users.forEach(user => { %>
+
+        <!-- Display each user's data -->
+        <p>
+            <%= user.name %> |
+            <%= user.email %> |
+            <%= user.age %>
+        </p>
+
+    <!-- End of loop -->
+    <% }) %>
+
+</body>
+
+</html>
